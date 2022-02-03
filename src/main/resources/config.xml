@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+  http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+    <bean id="plan" class="lesson1.Plan"/>
+    <bean id="schedule" class="lesson1.Schedule"/>
+    <bean id="person" class="lesson1.Person"/>
+    <bean id="archive" class="lesson1.Archive"/>
+
+    <bean id="doctor" class="lesson1.Therapist">
+        <property name="plan">
+            <ref bean="plan"/>
+        </property>
+        <property name="schedule">
+            <ref bean="schedule"/>
+        </property>
+    </bean>
+
+    <bean id="registry" class="lesson1.Registry">
+        <property name="doctor">
+            <ref bean="doctor" />
+        </property>
+        <property name="person">
+            <ref bean="person" />
+        </property>
+        <property name="archive">
+            <ref bean="archive" />
+        </property>
+    </bean>
+
+</beans>
