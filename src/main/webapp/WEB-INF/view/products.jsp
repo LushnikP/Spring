@@ -9,9 +9,6 @@
 
 <body>
 <h1>Welcome page</h1>
-
-<body>
-<h1>Welcome page</h1>
 <c:set var="list"  value="${products.productsAsList}" />
 <ul>
     <c:forEach var="item" items="${list}" >
