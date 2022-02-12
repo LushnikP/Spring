@@ -1,12 +1,13 @@
 package com.lesson3.entites;
 
 public class Products {
-    private Product[] products;
+    private List<Product> productList = new ArrayList<>();
 
-    public Product[] getProducts(){
-        return products;}
+    public List<Product> getProductsAsList(){
+        return productList;
+    }
 
     public void setProducts(Product[] products){
-        this.products = products;
+        productList.addAll(Arrays.asList(products));
     }
 }
