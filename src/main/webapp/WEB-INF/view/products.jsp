@@ -10,23 +10,14 @@
 <body>
 <h1>Welcome page</h1>
 
-<%--<h1> ${students[0].firstName}</h1>--%>
-<%--<h1> ${students[1].firstName}</h1>--%>
-
-<%--, ${name}.--%>
-
+<body>
+<h1>Welcome page</h1>
+<c:set var="list"  value="${products.productsAsList}" />
 <ul>
-    <c:forEach var="item" items="${products.products}">
-        <li>${item.title}</li>
-        <li>${item.cost}</li>
+    <c:forEach var="item" items="${list}" >
+                <li>${item.title}</li>
+                <li>${item.cost}</li>
     </c:forEach>
 </ul>
-
-<%--<ul>--%>
-    <%--<c:forEach var="item" items="${products}">--%>
-        <%--<li>${item.title}</li>--%>
-    <%--</c:forEach>--%>
-<%--</ul>--%>
-
 </body>
 </html>
